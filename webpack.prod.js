@@ -1,4 +1,4 @@
-const { merge } = require('webpack-merge');
+const merge = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -7,7 +7,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: '/node_modules/',
         use: [
           {
             loader: 'babel-loader',
